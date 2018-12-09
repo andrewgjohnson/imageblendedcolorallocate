@@ -1,0 +1,30 @@
+{
+    "name": "andrewgjohnson/imageblendedcolorallocate",
+    "type": "library",
+    "description": "imageblendedcolorallocate is a function that will allocate a new blended color based on two existing allocated colors for your PHP GD images",
+    "keywords": [
+        "gd",
+        "graphics",
+        "image",
+        "images"
+    ],
+    "homepage": "https://github.com/andrewgjohnson/imageblendedcolorallocate",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew G Johnson",
+            "email": "andrew@andrewgjohnson.com",
+            "homepage": "http://www.andrewgjohnson.com/",
+            "role": "Project Lead"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0",
+        "ext-gd": "*"
+    },
+    "autoload": {
+        "files": [
+            "source/imageblendedcolorallocate.php"
+        ]
+    }
+}
