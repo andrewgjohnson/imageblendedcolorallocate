@@ -7,6 +7,8 @@
 [![Packagist Downloads](https://img.shields.io/packagist/dt/andrewgjohnson/imageblendedcolorallocate.png)](https://packagist.org/packages/andrewgjohnson/imageblendedcolorallocate/stats)
 [![Issues](https://img.shields.io/github/issues/andrewgjohnson/imageblendedcolorallocate.png)](https://github.com/andrewgjohnson/imageblendedcolorallocate/issues)
 
+<p align="center"><a href="https://imageblendedcolorallocate.org/" title=""><img src="https://imageblendedcolorallocate.org/documentation/imageblendedcolorallocate.org/images/avatar.png" alt="" title="" width="400" id="avatar" /></a></p>
+
 ## Description
 
 **imageblendedcolorallocate** is a function that will allocate a new blended color based on two existing allocated colors for your PHP GD images.
@@ -55,7 +57,7 @@ To use without Composer add an [include](http://php.net/manual/function.include.
     $blendedEvenly = imageblendedcolorallocate($im, $blue, $cyan); // 50% blue, 50% cyan
     $blendedMostlyBlue = imageblendedcolorallocate($im, $blue, $cyan, 0.75); // 75% blue, 25% cyan
 
-There are [other examples](https://github.com/andrewgjohnson/imageblendedcolorallocate/tree/master/examples) included in the GitHub repository.
+There are [other examples](https://github.com/andrewgjohnson/imageblendedcolorallocate/tree/master/examples) included in the GitHub repository and on [imageblendedcolorallocate.org](https://imageblendedcolorallocate.org/examples/).
 
 ## Help Requests
 
