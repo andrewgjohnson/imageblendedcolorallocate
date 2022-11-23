@@ -1,3 +1,3 @@
 # Examples
 
-The examples can be viewed on [imageblendedcolorallocate.org/examples](https://imageblendedcolorallocate.org/examples/).
+The examples can be viewed on [imageblendedcolorallocate.agjgd.org/examples](https://imageblendedcolorallocate.agjgd.org/examples/).
