@@ -8,9 +8,12 @@ ehthumbs.db
 Thumbs.db
 .svn/
 .svn/*
+.settings/
+.settings/*
 .buildpath
 .project
 _site
 .settings/*
 composer.lock
 vendor
+.phpunit.result.cache

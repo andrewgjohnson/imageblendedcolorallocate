@@ -6,12 +6,12 @@ permalink: /examples/opacity/
 
 # Example: Opacity
 
-[**example_opacity.php**](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/examples/example_opacity.php)
+[**03-opacity.php**](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/examples/03-opacity.php)
 
-<pre><code>{% include examples/example_opacity.php %}</code></pre>
+<pre><code>{% include examples/03-opacity.php %}</code></pre>
 
 ## Expected Output
 
-[**example_opacity.png**](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/examples/example_opacity.png)
+[**03-opacity.png**](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/examples/03-opacity.png)
 
-![Example: Opacity](/examples/example_opacity.png "Example: Opacity")
+![Example: Opacity](/examples/03-opacity.png "Example: Opacity")

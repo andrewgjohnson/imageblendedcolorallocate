@@ -41,24 +41,21 @@ To use without Composer add an [include](http://php.net/manual/function.include.
 
 ## Examples
 
-    // standard method to allocate a color for an image
-    $red = imagecolorallocate($im, 0xFF, 0x00, 0x00);
+    // Allocate red and yellow using the standard method then blend the two to allocate orange
+    $red    = imagecolorallocate($im, 0xFF, 0x00, 0x00);
     $yellow = imagecolorallocate($im, 0xFF, 0xFF, 0x00);
-
-    // this will allocate an average of our two previously allocated colors
     $orange = imageblendedcolorallocate($im, $red, $yellow);
 
-    // yes, we do support alpha if you want to use transparent or translucent colors
-    $opaqueBlack = imagecolorallocatealpha($im, 0x00, 0x00, 0x00, 0);
+    // You can also allocate RGBA colors as well as RGB
+    $opaqueBlack      = imagecolorallocatealpha($im, 0x00, 0x00, 0x00, 0);
     $translucentBlack = imagecolorallocatealpha($im, 0x00, 0x00, 0x00, 63);
-    $blendedBlack = imageblendedcolorallocate($im, $opaqueBlack, $translucentBlack);
+    $blendedBlack     = imageblendedcolorallocate($im, $opaqueBlack, $translucentBlack);
 
-    // by default we do a 50/50 blend where we average the red, blue, green & alpha values for each color
-    // we also support non-50/50 blends
-    $blue = imagecolorallocate($im, 0x00, 0x00, 0xFF);
-    $cyan = imagecolorallocate($im, 0x00, 0xFF, 0xFF);
+    // By default, we allocate with a 50/50 blend where we average the red, blue, green and alpha values for each color but also support alternative blends
+    $blue              = imagecolorallocate($im, 0x00, 0x00, 0xFF);
+    $cyan              = imagecolorallocate($im, 0x00, 0xFF, 0xFF);
     $blendedMostlyCyan = imageblendedcolorallocate($im, $blue, $cyan, 0.25); // 25% blue, 75% cyan
-    $blendedEvenly = imageblendedcolorallocate($im, $blue, $cyan); // 50% blue, 50% cyan
+    $blendedEvenly     = imageblendedcolorallocate($im, $blue, $cyan); // 50% blue, 50% cyan
     $blendedMostlyBlue = imageblendedcolorallocate($im, $blue, $cyan, 0.75); // 75% blue, 25% cyan
 
 There are [other examples](https://github.com/andrewgjohnson/imageblendedcolorallocate/tree/master/examples) included in the GitHub repository and on [imageblendedcolorallocate.agjgd.org](https://imageblendedcolorallocate.agjgd.org/examples/).
@@ -71,7 +68,7 @@ If you discover a bug please [enter an issue](https://github.com/andrewgjohnson/
 
 ## Contributing
 
-Please read our [contributing guidelines](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/CONTRIBUTING.md) if you want to contribute.
+Please read our [contributing guidelines](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/.github/CONTRIBUTING.md) if you want to contribute.
 
 You can contribute financially by becoming a [patron](https://patreon.com/agjopensource) at [patreon.com/agjopensource](https://patreon.com/agjopensource) to support imageblendedcolorallocate and [other agjgd.org projects](https://agjgd.org/projects/).
 
