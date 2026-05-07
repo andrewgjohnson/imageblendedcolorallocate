@@ -110,7 +110,7 @@ if (!function_exists('imageblendedcolorallocate')) {
         $alpha += $alphaColor2 * $opacityColor2;
         $alpha  = round($alpha);
 
-        // If $alpha is greater than zero return an RGBA color identifier otherwise reutrn an RGB color identifier.
+        // If $alpha is greater than zero return an RGBA color identifier otherwise return an RGB color identifier.
         if ($alpha > 0) {
             return imagecolorallocatealpha($image, $red, $green, $blue, $alpha);
         } else {
