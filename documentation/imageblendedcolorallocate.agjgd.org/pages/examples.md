@@ -7,6 +7,6 @@ nav:       3
 
 # Examples
 
- * [Example: **Basic**](/examples/basic/)
- * [Example: **Alpha**](/examples/alpha/)
- * [Example: **Opacity**](/examples/opacity/)
+ * [Example One: **Basic**](/examples/basic/)
+ * [Example Two: **Alpha**](/examples/alpha/)
+ * [Example Three: **Opacity**](/examples/opacity/)
