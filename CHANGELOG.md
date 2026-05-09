@@ -4,6 +4,10 @@ All notable changes to the [imageblendedcolorallocate project](https://github.co
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.1.1 (May 9, 2026)
+ * Added [.gitattributes](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/.gitattributes) file to help manage end-of-line characters
+ * Added a `version_compare()` check before all `imagedestroy()` calls; the imagedestroy() function became an optional step that did nothing as of PHP 8.0 but as of PHP 8.5 when invoked it produces a deprecated error
+
 ## v1.1.0 (May 6, 2026)
  * Added [Contribute](https://imageblendedcolorallocate.agjgd.org/contribute/) page and updated [contributing guidelines](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/.github/CONTRIBUTING.md)
  * Added PHP_CodeSniffer support to enforce PSR-12 and PHP 5.0 compatibility

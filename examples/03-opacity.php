@@ -102,4 +102,4 @@ imagefilledrectangle(
 // Display our image and destroy the GD resource
 header('Content-Type: image/png');
 imagepng($im);
-imagedestroy($im);
+version_compare(PHP_VERSION, '8.0.0', '<') && imagedestroy($im);
