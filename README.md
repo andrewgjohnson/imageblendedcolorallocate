@@ -35,7 +35,7 @@ or add this to the `require` section of your composer.json file:
 
 ### Without Composer
 
-To use without Composer add an [include](http://php.net/manual/function.include.php) to the [`imageblendedcolorallocate.php` source file](https://raw.githubusercontent.com/andrewgjohnson/imageblendedcolorallocate/master/source/imageblendedcolorallocate.php).
+To use without Composer add an [include](https://www.php.net/manual/function.include.php) to the [`imageblendedcolorallocate.php` source file](https://raw.githubusercontent.com/andrewgjohnson/imageblendedcolorallocate/master/source/imageblendedcolorallocate.php).
 
     include_once 'source/imageblendedcolorallocate.php';
 
@@ -64,7 +64,7 @@ There are [other examples](https://github.com/andrewgjohnson/imageblendedcoloral
 
 Please post any questions in the [discussions area](https://github.com/andrewgjohnson/imageblendedcolorallocate/discussions) on GitHub if you need help.
 
-If you discover a bug please [enter an issue](https://github.com/andrewgjohnson/imageblendedcolorallocate/issues/new) on GitHub. When submitting an issue please use our [issue template](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/ISSUE_TEMPLATE.md).
+If you discover a bug please [enter an issue](https://github.com/andrewgjohnson/imageblendedcolorallocate/issues/new) on GitHub. When submitting an issue please use our [issue template](https://github.com/andrewgjohnson/imageblendedcolorallocate/tree/master/.github/ISSUE_TEMPLATE).
 
 ## Contributing
 
@@ -81,7 +81,7 @@ This project was started by [Andrew G. Johnson (@andrewgjohnson)](https://github
 Full list of contributors:
  * [Andrew G. Johnson (@andrewgjohnson)](https://github.com/andrewgjohnson)
 
-Our [security policies and procedures](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/.github/SECURITY.md) comes via the [atomist/samples](https://github.com/atomist/samples/blob/master/SECURITY.md) project. Our [issue templates](https://github.com/andrewgjohnson/imageblendedcolorallocate/tree/master/.github/ISSUE_TEMPLATE) comes via the [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [mountains photo](https://unsplash.com/photos/qJvpykJ5SKs) comes via [Gabriel Garcia Marengo](https://unsplash.com/@gabrielgm).
+Our [security policies and procedures](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/.github/SECURITY.md) come via the [atomist/samples](https://github.com/atomist/samples/blob/master/SECURITY.md) project. Our [issue templates](https://github.com/andrewgjohnson/imageblendedcolorallocate/tree/master/.github/ISSUE_TEMPLATE) come via the [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [mountains photo](https://unsplash.com/photos/qJvpykJ5SKs) comes via [Gabriel Garcia Marengo](https://unsplash.com/@gabrielgm).
 
 ## Changelog
 

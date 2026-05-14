@@ -12,7 +12,7 @@ Run the following command to check your changes against our linters and unit tes
 
 #### PHP
 
-The project uses the [PHP_CodeSniffer](https://github.com/squizlabs/php_codesniffer) linter tool to enforce coding standards in the [PHP source](https://imageblendedcolorallocate.agjgd.org/source/), [unit tests](https://github.com/andrewgjohnson/imageblendedcolorallocate/tree/master/tests) and [examples](https://imageblendedcolorallocate.agjgd.org/examples/). The project uses PHP_CodeSniffer [PSR-12](https://www.php-fig.org/psr/psr-12/) ruleset defined in the [PHP_CodeSniffer configuration file](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/phpcs.xml.dist). Run this command to test all code changes:
+The project uses the [PHP_CodeSniffer](https://github.com/squizlabs/php_codesniffer) linter tool to enforce coding standards in the [PHP source](https://imageblendedcolorallocate.agjgd.org/source/), [unit tests](https://github.com/andrewgjohnson/imageblendedcolorallocate/tree/master/tests) and [examples](https://imageblendedcolorallocate.agjgd.org/examples/). The project uses the PHP_CodeSniffer [PSR-12](https://www.php-fig.org/psr/psr-12/) ruleset defined in the [PHP_CodeSniffer configuration file](https://github.com/andrewgjohnson/imageblendedcolorallocate/blob/master/phpcs.xml.dist). Run this command to test all code changes:
 
     composer lint
 

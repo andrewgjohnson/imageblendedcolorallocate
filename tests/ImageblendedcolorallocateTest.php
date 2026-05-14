@@ -20,8 +20,129 @@ use PHPUnit\Framework\TestCase;
 
 class ImageblendedcolorallocateTest extends TestCase
 {
+    private \GdImage $image;
+
+    protected function setUp(): void
+    {
+        $this->image = imagecreatetruecolor(100, 100);
+    }
+
     public function testFunctionExists(): void
     {
         $this->assertTrue(function_exists('imageblendedcolorallocate'));
+    }
+
+    public function testEvenBlend(): void
+    {
+        $red    = imagecolorallocate($this->image, 0xFF, 0x00, 0x00);
+        $yellow = imagecolorallocate($this->image, 0xFF, 0xFF, 0x00);
+        $result = imageblendedcolorallocate($this->image, $red, $yellow);
+
+        $components = imagecolorsforindex($this->image, $result);
+
+        $this->assertSame(255, $components['red']);
+        $this->assertSame(128, $components['green']); // round(127.5) = 128
+        $this->assertSame(0, $components['blue']);
+        $this->assertSame(0, $components['alpha']);
+    }
+
+    public function testCustomRatioBlend(): void
+    {
+        $blue   = imagecolorallocate($this->image, 0x00, 0x00, 0xFF);
+        $cyan   = imagecolorallocate($this->image, 0x00, 0xFF, 0xFF);
+        $result = imageblendedcolorallocate($this->image, $blue, $cyan, 0.25);
+
+        $components = imagecolorsforindex($this->image, $result);
+
+        $this->assertSame(0, $components['red']);
+        $this->assertSame(191, $components['green']); // round(255 * 0.75) = 191
+        $this->assertSame(255, $components['blue']);
+        $this->assertSame(0, $components['alpha']);
+    }
+
+    public function testFullColor1Blend(): void
+    {
+        $red    = imagecolorallocate($this->image, 0xFF, 0x00, 0x00);
+        $blue   = imagecolorallocate($this->image, 0x00, 0x00, 0xFF);
+        $result = imageblendedcolorallocate($this->image, $red, $blue, 1.0);
+
+        $components = imagecolorsforindex($this->image, $result);
+
+        $this->assertSame(255, $components['red']);
+        $this->assertSame(0, $components['green']);
+        $this->assertSame(0, $components['blue']);
+        $this->assertSame(0, $components['alpha']);
+    }
+
+    public function testFullColor2Blend(): void
+    {
+        $red    = imagecolorallocate($this->image, 0xFF, 0x00, 0x00);
+        $blue   = imagecolorallocate($this->image, 0x00, 0x00, 0xFF);
+        $result = imageblendedcolorallocate($this->image, $red, $blue, 0.0);
+
+        $components = imagecolorsforindex($this->image, $result);
+
+        $this->assertSame(0, $components['red']);
+        $this->assertSame(0, $components['green']);
+        $this->assertSame(255, $components['blue']);
+        $this->assertSame(0, $components['alpha']);
+    }
+
+    public function testOutOfRangeOpacityFallsBackToEvenBlend(): void
+    {
+        $red    = imagecolorallocate($this->image, 0xFF, 0x00, 0x00);
+        $yellow = imagecolorallocate($this->image, 0xFF, 0xFF, 0x00);
+        $result = imageblendedcolorallocate($this->image, $red, $yellow, 1.5);
+
+        $components = imagecolorsforindex($this->image, $result);
+
+        $this->assertSame(255, $components['red']);
+        $this->assertSame(128, $components['green']); // falls back to 50/50, same as testEvenBlend
+        $this->assertSame(0, $components['blue']);
+        $this->assertSame(0, $components['alpha']);
+    }
+
+    public function testNegativeOpacityFallsBackToEvenBlend(): void
+    {
+        $red    = imagecolorallocate($this->image, 0xFF, 0x00, 0x00);
+        $yellow = imagecolorallocate($this->image, 0xFF, 0xFF, 0x00);
+        $result = imageblendedcolorallocate($this->image, $red, $yellow, -0.1);
+
+        $components = imagecolorsforindex($this->image, $result);
+
+        $this->assertSame(255, $components['red']);
+        $this->assertSame(128, $components['green']); // falls back to 50/50, same as testEvenBlend
+        $this->assertSame(0, $components['blue']);
+        $this->assertSame(0, $components['alpha']);
+    }
+
+    public function testAlphaBlend(): void
+    {
+        $opaqueBlack      = imagecolorallocatealpha($this->image, 0x00, 0x00, 0x00, 0);
+        $translucentBlack = imagecolorallocatealpha($this->image, 0x00, 0x00, 0x00, 63);
+        $result           = imageblendedcolorallocate($this->image, $opaqueBlack, $translucentBlack);
+
+        $components = imagecolorsforindex($this->image, $result);
+
+        $this->assertSame(0, $components['red']);
+        $this->assertSame(0, $components['green']);
+        $this->assertSame(0, $components['blue']);
+        $this->assertSame(32, $components['alpha']); // round(63 * 0.5) = 32
+    }
+
+    public function testInvalidColor1ReturnsFalse(): void
+    {
+        $blue   = imagecolorallocate($this->image, 0x00, 0x00, 0xFF);
+        $result = imageblendedcolorallocate($this->image, false, $blue);
+
+        $this->assertFalse($result);
+    }
+
+    public function testInvalidColor2ReturnsFalse(): void
+    {
+        $red    = imagecolorallocate($this->image, 0xFF, 0x00, 0x00);
+        $result = imageblendedcolorallocate($this->image, $red, false);
+
+        $this->assertFalse($result);
     }
 }
