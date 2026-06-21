@@ -1,6 +1,6 @@
 ---
-layout:    layout
-title:     imageblendedcolorallocate&#58; Examples&#58; Basic
+layout:    default
+title:     Basic • Examples • imageblendedcolorallocate
 permalink: /examples/basic/
 ---
 

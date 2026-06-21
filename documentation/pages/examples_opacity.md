@@ -1,6 +1,6 @@
 ---
-layout:    layout
-title:     imageblendedcolorallocate&#58; Examples&#58; Opacity
+layout:    default
+title:     Opacity • Examples • imageblendedcolorallocate
 permalink: /examples/opacity/
 ---
 

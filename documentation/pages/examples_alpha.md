@@ -1,6 +1,6 @@
 ---
-layout:    layout
-title:     imageblendedcolorallocate&#58; Examples&#58; Alpha
+layout:    default
+title:     Alpha • Examples • imageblendedcolorallocate
 permalink: /examples/alpha/
 ---
 

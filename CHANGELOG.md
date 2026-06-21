@@ -36,7 +36,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
  * Added Patrons shields.io badge to README.md
  * Enabled GitHub [discussions area](https://github.com/andrewgjohnson/imageblendedcolorallocate/discussions) and now recommending it over StackOverflow
  * Removed `ISSUE_TEMPLATE.md` file for our single issue template and replaced with `ISSUE_TEMPLATE` folder to separate bug reports & feature requests within GitHub [issues](https://github.com/andrewgjohnson/imageblendedcolorallocate/issues)
- * Updated [avatar image](https://imageblendedcolorallocate.agjgd.org/documentation/imageblendedcolorallocate.agjgd.org/images/avatar.png)
+ * Updated [avatar image](https://imageblendedcolorallocate.agjgd.org/documentation/images/avatar.png)
  * Moved all Twitter activity for all [agjgd projects](https://agjgd.org/projects/) (including imageblendedcolorallocate) to the [@agjgdphp Twitter account](https://twitter.com/agjgdphp) as there were issues with the individual accounts being frozen
  * Changed documentation website to [imageblendedcolorallocate.agjgd.org](https://imageblendedcolorallocate.agjgd.org)
  * Updated copyright years to 2022
