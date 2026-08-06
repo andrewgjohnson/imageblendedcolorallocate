@@ -15,7 +15,7 @@
  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
- * PHP version 5
+ * PHP version 8
  *
  * @category  Andrewgjohnson
  * @package   Imageblendedcolorallocate
@@ -25,11 +25,11 @@
  * @link      https://github.com/andrewgjohnson/imageblendedcolorallocate
  */
 
-// Include the imageblendedcolorallocate source if you’re not using Composer
-if (file_exists('../source/imageblendedcolorallocate.php')) {
-    require_once '../source/imageblendedcolorallocate.php';
+// Load imageblendedcolorallocate (and the AgjGd class it wraps) via Composer’s autoloader
+if (file_exists('../vendor/autoload.php')) {
+    require_once '../vendor/autoload.php';
 } elseif (!function_exists('imageblendedcolorallocate')) {
-    die('imageblendedcolorallocate not found');
+    die('imageblendedcolorallocate not found; run composer install');
 }
 
 // Set the parameters for our image
