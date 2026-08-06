@@ -4,6 +4,15 @@ All notable changes to the [imageblendedcolorallocate project](https://github.co
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [v2.0.0](https://github.com/andrewgjohnson/imageblendedcolorallocate/releases/tag/v2.0.0) (August 5, 2026)
+
+imageblendedcolorallocate is now part of [AgjGd](https://agjgd.org). The implementation has moved to the `\AndrewGJohnson\AgjGd` class and this package is now a thin reverse-compatibility wrapper around it.
+
+ * **Breaking:** raised the minimum PHP version from 5.0 to 8.0
+ * **Breaking:** added a dependency on [`andrewgjohnson/agjgd`](https://packagist.org/packages/andrewgjohnson/agjgd); the `imageblendedcolorallocate()` implementation now lives in the `\AndrewGJohnson\AgjGd` class
+ * Changed the global `imageblendedcolorallocate()` function into a deprecated reverse-compatibility wrapper that forwards to `\AndrewGJohnson\AgjGd::imageblendedcolorallocate()`; please use the class in new code
+ * Updated the examples and documentation to load the class through Composer’s autoloader
+
 ## [v1.1.2](https://github.com/andrewgjohnson/imageblendedcolorallocate/releases/tag/v1.1.2) (May 13, 2026)
  * Changed the font in the examples from Arial to [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) which uses the [SIL OFL 1.1](https://openfontlicense.org/open-font-license-official-text/)
  * Updated documentation website to replace deprecated `hljs.initHighlighting()` call with `hljs.highlightAll()` and removed obsolete Google Analytics script
